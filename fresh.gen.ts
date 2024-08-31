@@ -15,6 +15,8 @@ import * as $search from "./routes/search.tsx";
 import * as $settings from "./routes/settings.tsx";
 import * as $Countdown from "./islands/Countdown.tsx";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $Input from "./islands/Input.tsx";
+import * as $Select from "./islands/Select.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -34,6 +36,8 @@ const manifest = {
   islands: {
     "./islands/Countdown.tsx": $Countdown,
     "./islands/Counter.tsx": $Counter,
+    "./islands/Input.tsx": $Input,
+    "./islands/Select.tsx": $Select,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

@@ -1,4 +1,6 @@
 import { Handlers } from "$fresh/server.ts";
+import Select from "../components/Select.tsx";
+import Input from "../islands/Input.tsx";
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
@@ -9,6 +11,16 @@ export const handler: Handlers = {
 };
 
 export default function SettingsPage() {
+  const areaNumber = "010";
+
+  const areaMaster = [
+    { value: "010", label: "札幌" },
+    { value: "011", label: "函館" },
+    { value: "012", label: "旭川" },
+  ];
+
+  const initalAPIKey = "Sample Key";
+
   return (
     <div className="flex flex-col gap-5">
       <div className="rounded-md border border-gray-200/60 bg-gray-100/30 p-6">
@@ -35,6 +47,14 @@ export default function SettingsPage() {
             </h3>
           </hgroup>
         </header>
+        <form>
+          <Select selected={areaNumber} options={areaMaster} />
+          <Input
+            placeholder="NHK API Key"
+            isSecret={true}
+            value={initalAPIKey}
+          />
+        </form>
       </div>
 
       <div className="rounded-md border border-gray-200/60 bg-gray-100/30 p-6">
