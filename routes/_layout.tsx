@@ -3,20 +3,20 @@ import { PageProps } from "$fresh/server.ts";
 export default function Layout({ Component, url }: PageProps) {
   const appName = url.pathname.split("/")[1];
 
-  const app = {
-    "scrapbox-stream-notify": {
-      name: "ssn",
-      pages: [],
-    },
-    "nhk-connect": {
-      name: "nc",
-      pages: [
-        "nhkapi",
-        "notification",
-        "program",
-      ],
-    },
-  };
+  // const app = {
+  //   "scrapbox-stream-notify": {
+  //     name: "ssn",
+  //     pages: [],
+  //   },
+  //   "nhk-connect": {
+  //     name: "nc",
+  //     pages: [
+  //       "nhkapi",
+  //       "notification",
+  //       "program",
+  //     ],
+  //   },
+  // };
 
   return (
     <>
