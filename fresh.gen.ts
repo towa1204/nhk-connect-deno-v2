@@ -3,16 +3,18 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_404 from "./routes/_404.tsx";
+import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $about from "./routes/about.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
-import * as $api_random_uuid from "./routes/api/random-uuid.ts";
 import * as $countdown from "./routes/countdown.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
+import * as $nhk_connect_index from "./routes/nhk-connect/index.tsx";
+import * as $nhk_connect_nhkapi from "./routes/nhk-connect/nhkapi.tsx";
+import * as $nhk_connect_notification from "./routes/nhk-connect/notification.tsx";
+import * as $nhk_connect_program from "./routes/nhk-connect/program.tsx";
 import * as $search from "./routes/search.tsx";
-import * as $settings from "./routes/settings.tsx";
 import * as $Countdown from "./islands/Countdown.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Input from "./islands/Input.tsx";
@@ -22,16 +24,18 @@ import { type Manifest } from "$fresh/server.ts";
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
+    "./routes/_500.tsx": $_500,
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
     "./routes/about.tsx": $about,
-    "./routes/api/joke.ts": $api_joke,
-    "./routes/api/random-uuid.ts": $api_random_uuid,
     "./routes/countdown.tsx": $countdown,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/nhk-connect/index.tsx": $nhk_connect_index,
+    "./routes/nhk-connect/nhkapi.tsx": $nhk_connect_nhkapi,
+    "./routes/nhk-connect/notification.tsx": $nhk_connect_notification,
+    "./routes/nhk-connect/program.tsx": $nhk_connect_program,
     "./routes/search.tsx": $search,
-    "./routes/settings.tsx": $settings,
   },
   islands: {
     "./islands/Countdown.tsx": $Countdown,

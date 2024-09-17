@@ -2,10 +2,12 @@ import { useSignal } from "@preact/signals";
 import { useState } from "preact/hooks";
 
 export default function Input({
+  name,
   placeholder,
   isSecret = false,
   value,
 }: {
+  name: string;
   placeholder: string;
   value: string;
   isSecret: boolean;
@@ -28,6 +30,7 @@ export default function Input({
       <div className="relative w-full max-w-sm">
         <input
           type={inputType}
+          name={name}
           value={inputVal}
           className="w-full rounded-lg border px-4 py-2 pr-10 shadow outline-none hover:border-gray-500"
           placeholder={placeholder}

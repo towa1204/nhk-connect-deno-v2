@@ -1,25 +1,24 @@
-import { useSignal } from "@preact/signals";
-import Counter from "../islands/Counter.tsx";
+import AppCard from "../components/AppCard.tsx";
 
 export default function Home() {
-  const count = useSignal(3);
+  const appsInfo = [
+    {
+      name: "scrapbox-stream-notify ",
+      description: `Scrapboxプロジェクトの更新をDiscordに通知する`,
+      link: "/scrapbox-stream-notify",
+    },
+    {
+      name: "nhk-connect",
+      description: `NHKの番組情報を通知する`,
+      link: "/nhk-connect",
+    },
+  ];
+
   return (
-    <div class="px-4 py-8 mx-auto bg-[#86efac]">
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-        <img
-          class="my-6"
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the Fresh logo: a sliced lemon dripping with juice"
-        />
-        <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-        <p class="my-4">
-          Try updating this message in the
-          <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-        </p>
-        <Counter count={count} />
-      </div>
+    <div className="flex flex-wrap gap-5 justify-start">
+      {appsInfo.map(({ name, description, link }) => {
+        return <AppCard name={name} description={description} link={link} />;
+      })}
     </div>
   );
 }
