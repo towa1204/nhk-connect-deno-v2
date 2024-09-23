@@ -8,7 +8,6 @@ import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $about from "./routes/about.tsx";
 import * as $countdown from "./routes/countdown.tsx";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $nhk_connect_index from "./routes/nhk-connect/index.tsx";
 import * as $nhk_connect_nhkapi from "./routes/nhk-connect/nhkapi.tsx";
@@ -29,7 +28,6 @@ const manifest = {
     "./routes/_layout.tsx": $_layout,
     "./routes/about.tsx": $about,
     "./routes/countdown.tsx": $countdown,
-    "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/nhk-connect/index.tsx": $nhk_connect_index,
     "./routes/nhk-connect/nhkapi.tsx": $nhk_connect_nhkapi,
